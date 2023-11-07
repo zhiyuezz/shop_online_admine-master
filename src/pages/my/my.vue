@@ -11,7 +11,6 @@ const memberStore = useMemberStore()
       保存用户信息
     </button>
     <button @tap="memberStore.clearProfile()" size="mini" plain type="warn">清理用户信息</button>
-
     <uni-section title="设置" type="line">
       <uni-list>
         <uni-list-item title="去登录" show-arrow :to="`/pages/login/login`"> </uni-list-item>
