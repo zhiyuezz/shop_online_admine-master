@@ -47,6 +47,18 @@
       "style": {
         "navigationBarTitleText": "热门推荐"
       }
+    },
+    {
+      "path": "pages/goods/goods",
+      "style": {
+        "navigationBarTitleText": "商品详情"
+      }
+    },
+    {
+      "path": "pages/goods/components/ServicePanel",
+      "style": {
+        "navigationBarTitleText": "ServicePanel"
+      }
     }
   ],
   "globalStyle": {
@@ -107,6 +119,18 @@
             "navigationStyle": "custom",
             "navigationBarTextStyle": "white",
             "navigationBarTitleText": "个人信息"
+          }
+        },
+        {
+          "path": "address/address",
+          "style": {
+            "navigationBarTitleText": "地址管理"
+          }
+        },
+        {
+          "path": "address/address-form",
+          "style": {
+            "navigationBarTitleText": "编辑地址"
           }
         }
       ]
