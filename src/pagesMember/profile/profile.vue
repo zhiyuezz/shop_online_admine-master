@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { getMemberProfileAPI, putMemberProfileAPI } from '@/api/login'
 import { codeToText } from '@/utils/element-china-area-data.mjs'
+const memberStore = useMemberStore()
 // 获取屏幕边界到安全区域距离
 const { safeAreaInsets } = uni.getSystemInfoSync()
 // 完整地区
