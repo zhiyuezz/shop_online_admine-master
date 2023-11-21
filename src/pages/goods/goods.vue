@@ -38,6 +38,8 @@ const goods = ref<GoodsResult>()
 const getGoodsByIdData = async () => {
   const res = await getGoodsByIdAPI(query.id)
   goods.value = res.result
+  console.log(res.result.specs)
+
   // SKU组件所需格式
   localdata.value = {
     _id: res.result.id,

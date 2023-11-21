@@ -101,7 +101,6 @@
     ]
   },
   // 分包加载规则
-  // 分包加载规则
   "subPackages": [
     // 子包根目录
     {
@@ -131,6 +130,17 @@
           "path": "address/address-form",
           "style": {
             "navigationBarTitleText": "编辑地址"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/pagesOrder",
+      "pages": [
+        {
+          "path": "create/create",
+          "style": {
+            "navigationBarTitleText": "create"
           }
         }
       ]
