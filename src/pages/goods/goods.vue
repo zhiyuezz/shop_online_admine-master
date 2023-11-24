@@ -109,12 +109,19 @@ const onAddCart = async (ev: SkuPopupEvent) => {
   uni.showToast({ title: '添加成功' })
   isShowSku.value = false
 }
+
+const onBuyNow = (ev: SkuPopupEvent) => {
+  uni.navigateTo({
+    url: `/pagesOrder/create/create?id=${ev.goods_id}&count=${ev.buy_num}&attrsText=${selectArrText.value}`
+  })
+}
 </script>
 
 <template>
   <!-- SKU弹窗组件 -->
   <vk-data-goods-sku-popup
     @add-cart="onAddCart"
+    @buy-now="onBuyNow"
     v-model="isShowSku"
     :localdata="localdata"
     :mode="mode"
@@ -230,7 +237,7 @@ const onAddCart = async (ev: SkuPopupEvent) => {
     </view>
     <view class="buttons">
       <view @tap="openSkuPopup(SkuMode.Cart)" class="addcart"> 加入购物车 </view>
-      <view @tap="openSkuPopup(SkuMode.Buy)" class="buynow"> 立即购买 </view>
+      <view @tap="openSkuPopup(SkuMode.Buy)" class="buynow" @click="onBuyNow"> 立即购买 </view>
     </view>
   </view>
 </template>
